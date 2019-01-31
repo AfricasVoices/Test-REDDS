@@ -20,8 +20,6 @@ TEST_CONTACTS_PATH="/Users/IsaackMwenda/AVF/Test-REDDS/data/test_contacts.json"
 SHOWS=(
      "internet_working_poll"
     "water_filter_poll"
-    "demog_age"
-    "demog_gender"
 )
 
 SURVEY=(
