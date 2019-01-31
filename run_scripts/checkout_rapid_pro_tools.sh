@@ -29,7 +29,7 @@ if [ $(git config --get remote.origin.url) != "$RAPID_PRO_TOOLS_REPO" ]; then
     exit 1
 fi
 
-# If the provided tag wasn't found, run git fetch in case the remote has been updated
+# If the provided tag wasn't found, run git fetch in case the remote has been updated.
 if ! [ $(git tag -l "$TAG") ]; then
     git fetch --tags
 fi
