@@ -48,7 +48,7 @@ where:
    [RapidProTools](https://github.com/AfricasVoices/RapidProTools) in.
    The RapidProTools project hosts the re-usable RapidPro data fetchers.
    The exact version required by this project is checked out automatically.
- - `rapid-pro-server` is the root address of the RapidPro server to retrieve data from e.g. `https://app.rapidpro.io`.
+ - `rapid-pro-server` is the root address of the RapidPro server to retrieve data from e.g. `http://textit.in/`.
  - `rapid-pro-token` is the access token for this instance of RapidPro. The access token may be found by logging into 
    RapidPro's web interface, then navigating to your organisation page (via the button in the top-right), then copying
    the hexadecimal string given after "Your API Token is ..."
