@@ -14,8 +14,7 @@ RP_SERVER=$3
 RP_TOKEN=$4
 DATA_ROOT=$5
 
-#TEST_CONTACTS_PATH="$(pwd)/data/test_contacts.json"
-TEST_CONTACTS_PATH="/Users/IsaackMwenda/AVF/Test-REDDS/data/test_contacts.json"
+TEST_CONTACTS_PATH="$(pwd)/data/test_contacts.json"
 
 SHOWS=(
      "internet_working_poll"
