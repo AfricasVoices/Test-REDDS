@@ -25,7 +25,7 @@ SURVEY=(
    
 )
 
-#./run_scripts/checkout_rapid_pro_tools.sh "$RP_DIR"
+./checkout_rapid_pro_tools.sh "$RP_DIR"
 
 mkdir -p "$DATA_ROOT/Raw Data"
 
