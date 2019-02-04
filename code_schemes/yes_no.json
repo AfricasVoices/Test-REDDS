@@ -1,0 +1,92 @@
+{
+    "Version": "0.0.0.1",
+    "Name": "Yes_No",
+    "SchemeID": "Scheme-04998c27cdcb",
+    "Codes": [{
+        "DisplayText": "Yes",
+        "VisibleInCoda": true,
+        "NumericValue": 0,
+        "CodeID": "code-ehg2ad7ce2cf",
+        "CodeType": "Normal",
+        "MatchValues": [
+          "yes"
+        ],
+        "StringValue": "yes"
+      },
+      {
+        "NumericValue": 1,
+        "CodeID": "code-41f5jk8a71ef",
+        "CodeType": "Normal",
+        "MatchValues": [
+          "no"
+        ],
+        "StringValue": "no",
+        "DisplayText": "No",
+        "VisibleInCoda": true
+      },
+      {
+        "DisplayText": "NA (missing)",
+        "VisibleInCoda": false,
+        "NumericValue": -10,
+        "CodeID": "code-NA-f78d3eb7",
+        "CodeType": "Control",
+        "StringValue": "NA",
+        "ControlCode": "NA"
+      },
+      {
+        "ControlCode": "NS",
+        "DisplayText": "NS (skip)",
+        "VisibleInCoda": false,
+        "NumericValue": -20,
+        "CodeID": "code-NS-2c16b9c9",
+        "CodeType": "Control",
+        "StringValue": "NS"
+      },
+      {
+        "CodeType": "Control",
+        "StringValue": "NC",
+        "ControlCode": "NC",
+        "DisplayText": "NC (not coded)",
+        "VisibleInCoda": true,
+        "NumericValue": -30,
+        "CodeID": "code-NC-42f4h983"
+      },
+      {
+        "DisplayText": "NR (not reviewed)",
+        "VisibleInCoda": false,
+        "NumericValue": -40,
+        "CodeID": "code-NR-5e3ffe24",
+        "CodeType": "Control",
+        "StringValue": "NR",
+        "ControlCode": "NR"
+      },
+      {
+        "DisplayText": "NIC (not internally consistent)",
+        "VisibleInCoda": false,
+        "NumericValue": -50,
+        "CodeID": "code-NIC-99641fb8",
+        "CodeType": "Control",
+        "StringValue": "NIC",
+        "ControlCode": "NIC"
+      },
+      {
+        "DisplayText": "STOP",
+        "VisibleInCoda": true,
+        "NumericValue": -90,
+        "CodeID": "code-STOP-08b902a8",
+        "CodeType": "Control",
+        "StringValue": "STOP",
+        "ControlCode": "STOP"
+      },
+      {
+        "NumericValue": -100,
+        "CodeID": "code-WS-adb25613j7af",
+        "CodeType": "Control",
+        "StringValue": "WS",
+        "ControlCode": "WS",
+        "DisplayText": "WS (wrong scheme)",
+        "VisibleInCoda": true
+      }
+    ]
+  }
+  
