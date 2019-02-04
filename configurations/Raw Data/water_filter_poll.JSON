@@ -1,0 +1,134 @@
+[
+  {
+    "_data": {
+      "avf_phone_id": "avf-phone-uuid-0f0effc1-42ed-4334-a8a2-ac134249ce91", 
+      "created_on": "2019-01-14T12:23:40.370815+00:00", 
+      "exit_type": "interrupted", 
+      "exited_on": "2019-01-14T12:24:35.401590+00:00", 
+      "modified_on": "2019-01-14T12:24:35.401590+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934980.4758186, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "8d5f0735ad4c42fdbc84aae196abe7e36fef01c8706e7650e4f850b3b9994bd2", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }, 
+  {
+    "_data": {
+      "Filter_Working (Category) - water_filter_poll": "Yes", 
+      "Filter_Working (Name) - water_filter_poll": "Filter Working", 
+      "Filter_Working (Run ID) - water_filter_poll": 96322933, 
+      "Filter_Working (Text) - water_filter_poll": "Yes", 
+      "Filter_Working (Time) - water_filter_poll": "2019-01-14T12:26:14.938001+00:00", 
+      "Filter_Working (Value) - water_filter_poll": "Yes", 
+      "avf_phone_id": "avf-phone-uuid-3c1df746-e59c-4a2d-a4fc-41e6990ad8e5", 
+      "created_on": "2019-01-14T12:25:57.121462+00:00", 
+      "exit_type": "completed", 
+      "exited_on": "2019-01-14T12:26:14.966305+00:00", 
+      "modified_on": "2019-01-14T12:26:14.966464+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934980.476137, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "e48dad01067a81f1494861e94625f8d36b188d5c01569538d82764d9553d1d06", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }, 
+  {
+    "_data": {
+      "avf_phone_id": "avf-phone-uuid-0f0effc1-42ed-4334-a8a2-ac134249ce91", 
+      "created_on": "2019-01-14T12:24:35.504016+00:00", 
+      "exit_type": "interrupted", 
+      "exited_on": "2019-01-14T12:26:15.132384+00:00", 
+      "modified_on": "2019-01-14T12:26:15.132384+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934980.4764817, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "9864570b835908b204dfbe6a146b1e3335f740c21dfb2bdb337277e62703305f", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }, 
+  {
+    "_data": {
+      "Filter_Working (Category) - water_filter_poll": "No", 
+      "Filter_Working (Name) - water_filter_poll": "Filter Working", 
+      "Filter_Working (Run ID) - water_filter_poll": 96322952, 
+      "Filter_Working (Text) - water_filter_poll": "No", 
+      "Filter_Working (Time) - water_filter_poll": "2019-01-14T12:35:18.342172+00:00", 
+      "Filter_Working (Value) - water_filter_poll": "No", 
+      "avf_phone_id": "avf-phone-uuid-0f0effc1-42ed-4334-a8a2-ac134249ce91", 
+      "created_on": "2019-01-14T12:26:15.233930+00:00", 
+      "exit_type": "completed", 
+      "exited_on": "2019-01-14T12:35:18.393643+00:00", 
+      "modified_on": "2019-01-14T12:35:18.393764+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934980.4766986, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "74b215de426e1d8dc6c55fda92e94edd57a21b4ac90c282e1a561dbb6d6cc0d5", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }, 
+  {
+    "_data": {
+      "Filter_Working (Category) - water_filter_poll": "No", 
+      "Filter_Working (Name) - water_filter_poll": "Filter Working", 
+      "Filter_Working (Run ID) - water_filter_poll": 96325363, 
+      "Filter_Working (Text) - water_filter_poll": "No", 
+      "Filter_Working (Time) - water_filter_poll": "2019-01-14T13:42:56.135559+00:00", 
+      "Filter_Working (Value) - water_filter_poll": "No", 
+      "avf_phone_id": "avf-phone-uuid-3c1df746-e59c-4a2d-a4fc-41e6990ad8e5", 
+      "created_on": "2019-01-14T13:42:44.862804+00:00", 
+      "exit_type": "completed", 
+      "exited_on": "2019-01-14T13:42:56.165437+00:00", 
+      "modified_on": "2019-01-14T13:42:56.165569+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934980.4769094, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "3df367ae93be57e30b0c894f60c8e8d35cbf03c76be14b6bb17d069805ab521c", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }, 
+  {
+    "_data": {
+      "Filter_Working (Category) - water_filter_poll": "Yes", 
+      "Filter_Working (Name) - water_filter_poll": "Filter Working", 
+      "Filter_Working (Run ID) - water_filter_poll": 96325366, 
+      "Filter_Working (Text) - water_filter_poll": "Yes", 
+      "Filter_Working (Time) - water_filter_poll": "2019-01-14T13:43:16.757880+00:00", 
+      "Filter_Working (Value) - water_filter_poll": "Yes", 
+      "avf_phone_id": "avf-phone-uuid-3c1df746-e59c-4a2d-a4fc-41e6990ad8e5", 
+      "created_on": "2019-01-14T13:43:02.900962+00:00", 
+      "exit_type": "completed", 
+      "exited_on": "2019-01-14T13:43:16.790574+00:00", 
+      "modified_on": "2019-01-14T13:43:16.790719+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934980.4771175, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "6ecd553fc766fecf4c9bc2889b9205f4e209123731a7c041b2182c1f85c368f9", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "_data": {
+      "Internet_Working (Category) - internet_working_poll": "Yes", 
+      "Internet_Working (Name) - internet_working_poll": "Internet Working", 
+      "Internet_Working (Run ID) - internet_working_poll": 97251464, 
+      "Internet_Working (Text) - internet_working_poll": "Yes", 
+      "Internet_Working (Time) - internet_working_poll": "2019-01-30T13:45:20.694053+00:00", 
+      "Internet_Working (Value) - internet_working_poll": "Yes", 
+      "avf_phone_id": "avf-phone-uuid-3c1df746-e59c-4a2d-a4fc-41e6990ad8e5", 
+      "created_on": "2019-01-30T13:45:06.950795+00:00", 
+      "exit_type": "completed", 
+      "exited_on": "2019-01-30T13:45:20.754240+00:00", 
+      "modified_on": "2019-01-30T13:45:20.754378+00:00"
+    }, 
+    "_metadata": {
+      "py/object": "core_data_modules.traced_data.traced_data.Metadata", 
+      "source": "fetch_runs.py:133:<module>", 
+      "timestamp": 1548934971.6075041, 
+      "user": "isaack@africasvoices.org"
+    }, 
+    "_prev": null, 
+    "_sha": "2518d105200a16e61172833d7543af342d19f34f673f6a6f55135d00f0a6ab30", 
+    "py/object": "core_data_modules.traced_data.traced_data.TracedData"
+  }
+]
