@@ -1,34 +1,43 @@
 {
-    "SchemeID": "Scheme-12c78f95",
-    "Name": "Gender",
+    "SchemeID": "Scheme-07ghc611",
+    "Name": "Client_location",
     "Version": "0.0.0.1",
     "Codes": [
       {
-        "CodeID": "code-63fgde9a",
+        "CodeID": "code-d170504a",
         "CodeType": "Normal",
-        "DisplayText": "male",
+        "DisplayText": "Westlands",
+        "StringValue": "westlands",
         "NumericValue": 1,
-        "StringValue": "male",
-        "Shortcut": "m",
         "VisibleInCoda": true,
-        "MatchValues" : [
-          "male"
+        "MatchValues": [
+          "westlands"
         ]
       },
       {
-        "CodeID": "code-86a5702c",
+        "CodeID": "code-6a343003",
         "CodeType": "Normal",
-        "DisplayText": "female",
+        "DisplayText": "Eastlands",
+        "StringValue": "eastlands",
         "NumericValue": 2,
-        "StringValue" : "female",
-        "Shortcut": "f",
         "VisibleInCoda": true,
-        "MatchValues" : [
-          "female"
+        "MatchValues": [
+          "eastlands"
         ]
       },
       {
-        "CodeID": "code-NA-f94g3eb7",
+        "CodeID": "code-d43c2e7a",
+        "CodeType": "Normal",
+        "DisplayText": "Central",
+        "StringValue": "central",
+        "NumericValue": 3,
+        "VisibleInCoda": true,
+        "MatchValues": [
+          "central"
+        ]
+      },
+      {
+        "CodeID": "code-NA-f90d3eb7",
         "CodeType": "Control",
         "ControlCode": "NA",
         "DisplayText": "NA (missing)",
@@ -37,7 +46,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-NS-2c12b8c9",
+        "CodeID": "code-NS-2c17b7h9",
         "CodeType": "Control",
         "ControlCode": "NS",
         "DisplayText": "NS (skip)",
@@ -46,7 +55,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-NC-42f2d993",
+        "CodeID": "code-NC-42j1d993",
         "CodeType": "Control",
         "ControlCode": "NC",
         "DisplayText": "NC (not coded)",
@@ -55,7 +64,7 @@
         "VisibleInCoda": true
       },
       {
-        "CodeID": "code-NR-5e3ejke23",
+        "CodeID": "code-NR-5e3egh27",
         "CodeType": "Control",
         "ControlCode": "NR",
         "DisplayText": "NR (not reviewed)",
@@ -64,7 +73,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-NIC-97634cb8",
+        "CodeID": "code-NIC-99671db8",
         "CodeType": "Control",
         "ControlCode": "NIC",
         "DisplayText": "NIC (not internally consistent)",
@@ -73,7 +82,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-STOP-08b932h8",
+        "CodeID": "code-STOP-08b982a8",
         "CodeType": "Control",
         "ControlCode": "STOP",
         "DisplayText": "STOP",
@@ -82,7 +91,7 @@
         "VisibleInCoda": true
       },
       {
-        "CodeID": "code-WS-ach25623b7af",
+        "CodeID": "code-WS-adb25613b7gf",
         "CodeType": "Control",
         "ControlCode": "WS",
         "DisplayText": "WS (wrong scheme)",
@@ -92,4 +101,3 @@
       }
     ]
   }
-  
