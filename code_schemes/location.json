@@ -1,6 +1,6 @@
 {
     "SchemeID": "Scheme-07ghc611",
-    "Name": "Client_location",
+    "Name": "Client location",
     "Version": "0.0.0.1",
     "Codes": [
       {
@@ -37,7 +37,7 @@
         ]
       },
       {
-        "CodeID": "code-NA-f90d3eb7",
+        "CodeID": "code-NA-f93d3eb7",
         "CodeType": "Control",
         "ControlCode": "NA",
         "DisplayText": "NA (missing)",
@@ -46,7 +46,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-NS-2c17b7h9",
+        "CodeID": "code-NS-2c11b7c9",
         "CodeType": "Control",
         "ControlCode": "NS",
         "DisplayText": "NS (skip)",
@@ -55,7 +55,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-NC-42j1d993",
+        "CodeID": "code-NC-42f1d983",
         "CodeType": "Control",
         "ControlCode": "NC",
         "DisplayText": "NC (not coded)",
@@ -64,7 +64,7 @@
         "VisibleInCoda": true
       },
       {
-        "CodeID": "code-NR-5e3egh27",
+        "CodeID": "code-NR-5e3eee23",
         "CodeType": "Control",
         "ControlCode": "NR",
         "DisplayText": "NR (not reviewed)",
@@ -73,7 +73,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-NIC-99671db8",
+        "CodeID": "code-NIC-99631cb8",
         "CodeType": "Control",
         "ControlCode": "NIC",
         "DisplayText": "NIC (not internally consistent)",
@@ -82,7 +82,7 @@
         "VisibleInCoda": false
       },
       {
-        "CodeID": "code-STOP-08b982a8",
+        "CodeID": "code-STOP-08b832a8",
         "CodeType": "Control",
         "ControlCode": "STOP",
         "DisplayText": "STOP",
@@ -91,14 +91,14 @@
         "VisibleInCoda": true
       },
       {
-        "CodeID": "code-WS-adb25613b7gf",
+        "CodeID": "code-WS-adb25603b7af",
         "CodeType": "Control",
         "ControlCode": "WS",
         "DisplayText": "WS (wrong scheme)",
         "NumericValue": -100,
         "StringValue": "WS",
         "VisibleInCoda": true
-      }
+      }    
     ]
   }
   
