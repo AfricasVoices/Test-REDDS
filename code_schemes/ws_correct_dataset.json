@@ -1,0 +1,57 @@
+{
+    "SchemeID": "Scheme-b47005f9",
+    "Name": "WS - Correct Dataset",
+    "Version": "0.0.0.1",
+    "Codes": [
+      {
+        "CodeID": "code-45133562",
+        "CodeType": "Normal",
+        "DisplayText": "age",
+        "StringValue": "age",
+        "NumericValue": 1,
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-154b6cb7",
+        "CodeType": "Normal",
+        "DisplayText": "gender",
+        "StringValue": "gender",
+        "NumericValue": 2,
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-7614a4d3",
+        "CodeType": "Normal",
+        "DisplayText": "location",
+        "StringValue": "location",
+        "NumericValue": 3,
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-5c2c99ab",
+        "CodeType": "Normal",
+        "DisplayText": "internet_working",
+        "StringValue": "internet_working",
+        "NumericValue": 4,
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-bf39d58c",
+        "CodeType": "Normal",
+        "DisplayText": "water_filter",
+        "StringValue": "water_filter",
+        "NumericValue": 5,
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-NR-5e3eee23",
+        "CodeType": "Control",
+        "ControlCode": "NR",
+        "DisplayText": "NR (not reviewed)",
+        "NumericValue": -40,
+        "StringValue": "NR",
+        "VisibleInCoda": false
+      }
+    ]
+  }
+  
