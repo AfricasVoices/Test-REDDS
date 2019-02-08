@@ -19,6 +19,7 @@ TEST_CONTACTS_PATH="$(pwd)/configurations/test_contacts.json"
 SHOWS=(
     "internet_working_poll"
     "water_filter_poll"
+    "demogs"
 )
 
 SURVEY=(

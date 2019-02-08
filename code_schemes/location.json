@@ -1,0 +1,104 @@
+{
+    "SchemeID": "Scheme-07ghc611",
+    "Name": "Client location",
+    "Version": "0.0.0.1",
+    "Codes": [
+      {
+        "CodeID": "code-d170504a",
+        "CodeType": "Normal",
+        "DisplayText": "Westlands",
+        "StringValue": "westlands",
+        "NumericValue": 1,
+        "VisibleInCoda": true,
+        "MatchValues": [
+          "westlands"
+        ]
+      },
+      {
+        "CodeID": "code-6a343003",
+        "CodeType": "Normal",
+        "DisplayText": "Eastlands",
+        "StringValue": "eastlands",
+        "NumericValue": 2,
+        "VisibleInCoda": true,
+        "MatchValues": [
+          "eastlands"
+        ]
+      },
+      {
+        "CodeID": "code-d43c2e7a",
+        "CodeType": "Normal",
+        "DisplayText": "Central",
+        "StringValue": "central",
+        "NumericValue": 3,
+        "VisibleInCoda": true,
+        "MatchValues": [
+          "central"
+        ]
+      },
+      {
+        "CodeID": "code-NA-f93d3eb7",
+        "CodeType": "Control",
+        "ControlCode": "NA",
+        "DisplayText": "NA (missing)",
+        "NumericValue": -10,
+        "StringValue": "NA",
+        "VisibleInCoda": false
+      },
+      {
+        "CodeID": "code-NS-2c11b7c9",
+        "CodeType": "Control",
+        "ControlCode": "NS",
+        "DisplayText": "NS (skip)",
+        "NumericValue": -20,
+        "StringValue": "NS",
+        "VisibleInCoda": false
+      },
+      {
+        "CodeID": "code-NC-42f1d983",
+        "CodeType": "Control",
+        "ControlCode": "NC",
+        "DisplayText": "NC (not coded)",
+        "NumericValue": -30,
+        "StringValue": "NC",
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-NR-5e3eee23",
+        "CodeType": "Control",
+        "ControlCode": "NR",
+        "DisplayText": "NR (not reviewed)",
+        "NumericValue": -40,
+        "StringValue": "NR",
+        "VisibleInCoda": false
+      },
+      {
+        "CodeID": "code-NIC-99631cb8",
+        "CodeType": "Control",
+        "ControlCode": "NIC",
+        "DisplayText": "NIC (not internally consistent)",
+        "NumericValue": -50,
+        "StringValue": "NIC",
+        "VisibleInCoda": false
+      },
+      {
+        "CodeID": "code-STOP-08b832a8",
+        "CodeType": "Control",
+        "ControlCode": "STOP",
+        "DisplayText": "STOP",
+        "NumericValue": -90,
+        "StringValue": "STOP",
+        "VisibleInCoda": true
+      },
+      {
+        "CodeID": "code-WS-adb25603b7af",
+        "CodeType": "Control",
+        "ControlCode": "WS",
+        "DisplayText": "WS (wrong scheme)",
+        "NumericValue": -100,
+        "StringValue": "WS",
+        "VisibleInCoda": true
+      }   
+    ]
+  }
+  
