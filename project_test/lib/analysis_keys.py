@@ -34,7 +34,7 @@ class Analysiskeys(object):
                     show_keys.update({code_yes_key,code_no_key})
 
                     matrix_d[code_yes_key] = td[key] if yes_no == Codes.YES else Codes.MATRIX_0
-                    matrix_d[code_no_key] = td[key] if yes_no ==Codes.No else Codes.MATRIX_0
+                    matrix_d[code_no_key] = td[key] if yes_no == Codes.No else Codes.MATRIX_0
 
             td.append_data(matrix_d, Metadata(user, Metadata.get_call_location(), time.time()))
 

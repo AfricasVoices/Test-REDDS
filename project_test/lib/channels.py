@@ -13,7 +13,7 @@ class Channels(object):
     WATER_KEY =  "water_filter"
 
     # Time ranges expressed in format (start_of_range_inclusive, end_of_range_exclusive)
-    #TODO: Setup rapid pro shows to test date ranges
+    #TODO: Setup rapid pro shows to test date ranges then update the list below
     SMS_AD_RANGES = [
         
     ]
@@ -86,14 +86,3 @@ class Channels(object):
                     channel_dict[key] = Codes.FALSE
             
             td.append_data(channel_dict, Metadata(user, Metadata.get_call_location(), time.time()))
-
-
-
-
-
-
-
-
-
-
-   

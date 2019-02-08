@@ -86,3 +86,4 @@ class PipelineConfiguration(object):
     ]
 
     SURVEY_CODING_PLANS.extend(LOCATION_CODING_PLANS)
+    

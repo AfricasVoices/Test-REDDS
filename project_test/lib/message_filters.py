@@ -23,3 +23,4 @@ class MessageFilters(object):
     @staticmethod
     def filter_noise(messages, message_key, noise_fn):
         return [td for in messages if not noise_fn(td.get(message_key))]
+        

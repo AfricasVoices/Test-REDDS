@@ -12,3 +12,4 @@ class ICRTools(object):
             sample_size = len(data)
         
         return random_generator.sample(data, sample_size)
+        
