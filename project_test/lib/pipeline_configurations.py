@@ -1,6 +1,6 @@
 from core_data_modules.cleaners import swahili, Codes
 
-from project_redss.lib.redss_schemes import CodeSchemes
+from project_test.lib.test_schemes import CodeSchemes
 
 class CodingPlan(object):
     def __init__ (self, raw_field, coded_field, coda_filename, cleaner=None, code_scheme=None, time_field=None,
