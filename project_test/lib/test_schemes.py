@@ -13,6 +13,4 @@ class CodeSchemes(object):
     GENDER = _open_scheme("gender.json")
     AGE = _open_scheme("age.json")
     LOCATION = _open_scheme("location.json")   
-    OPERATOR = _open_scheme("operator.json")
     WS_CORRECT_DATASET = _open_scheme("ws_correct_dataset.json")
-    
