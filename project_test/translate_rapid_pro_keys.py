@@ -19,7 +19,11 @@ class TranslateRapidProKeys(object):
         ("water_filter_raw", "Filter_Working (Value) - water_filter_poll"),
         ("water_filter_run_id", "Filter_Working (Run ID) - water_filter_poll"),
         ("sent_on", "Filter_Working (Time) - water_filter_poll"),
-        
+
+        ("waste_disposal_raw", "Waste_Disposal_Satisfaction (Value) - waste_disposal_satisfaction")
+        ("waste_disposal_run_id", "Waste_Disposal_Satisfaction (Run ID) - waste_disposal_satisfaction")
+        ("sent_on", "Waste_Disposal_Satisfaction (Time) - waste_disposal_satisfaction")
+
         ("age_raw", "Age (Value) - demogs"),
         ("age_time", "Age (Time) - demogs"),
 
