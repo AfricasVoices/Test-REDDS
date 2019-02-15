@@ -7,14 +7,14 @@
         "NumericValue": 0,
         "CodeID": "code-72db9807",
         "CodeType": "Normal",
-        "StringValue": "increase Pickup times",
-        "DisplayText": "Increase Pickup times"
+        "StringValue": "increase_pickup_times",
+        "DisplayText": "Increase pickup times"
       },
       {
         "NumericValue": 1,
         "CodeID": "code-ecda100f",
         "CodeType": "Normal",
-        "StringValue": "issue more garbage bags",
+        "StringValue": "issue_more_garbage_bags",
         "DisplayText": "Issue more garbage bags",
         "VisibleInCoda": true
       },
