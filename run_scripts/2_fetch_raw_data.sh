@@ -20,11 +20,11 @@ SHOWS=(
     "internet_working_poll"
     "water_filter_poll"
     "waste_disposal_satisfaction"
-    "demogs"
+    
 )
 
 SURVEY=(
-   
+  "demogs"
 )
 
 ./checkout_rapid_pro_tools.sh "$RP_DIR"

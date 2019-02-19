@@ -3,6 +3,7 @@ from os import path
 
 from core_data_modules.traced_data import Metadata
 from core_data_modules.traced_data.io import TracedDataCoda2IO
+
 from dateutil.parser import isoparse
 
 from project_test.lib.test_schemes import CodeSchemes
@@ -20,9 +21,9 @@ class TranslateRapidProKeys(object):
         ("water_filter_run_id", "Filter_Working (Run ID) - water_filter_poll"),
         ("sent_on", "Filter_Working (Time) - water_filter_poll"),
 
-        ("waste_disposal_raw", "Waste_Disposal_Satisfaction (Value) - waste_disposal_satisfaction")
-        ("waste_disposal_run_id", "Waste_Disposal_Satisfaction (Run ID) - waste_disposal_satisfaction")
-        ("sent_on", "Waste_Disposal_Satisfaction (Time) - waste_disposal_satisfaction")
+        ("waste_disposal_raw", "Waste_Disposal_Satisfaction (Value) - waste_disposal_satisfaction"),
+        ("waste_disposal_run_id", "Waste_Disposal_Satisfaction (Run ID) - waste_disposal_satisfaction"),
+        ("sent_on", "Waste_Disposal_Satisfaction (Time) - waste_disposal_satisfaction"),
 
         ("age_raw", "Age (Value) - demogs"),
         ("age_time", "Age (Time) - demogs"),
@@ -30,7 +31,7 @@ class TranslateRapidProKeys(object):
         ("gender_raw", "Gender_Test (Value) - demogs"),
         ("gender_time", "Gender_Test (Time) - demogs"),
 
-        ("client_region_raw", "Response_4 (Value) - demogs")
+        ("client_region_raw", "Response_4 (Value) - demogs"),
         ("client_region_time", "Response_4 (Time) - demogs")
         
         ]
