@@ -4,20 +4,25 @@ from project_test.lib.test_schemes import CodeSchemes
 
 class CodingPlan(object):
     def __init__ (self, raw_field, coded_field, coda_filename, cleaner=None, code_scheme=None, time_field=None,
-                    run_id_field=None, icr_filename=None, analysis_file_key=None, id_field=None):
+                    run_id_field=None, icr_filename=None, analysis_file_key=None, id_field=None,
+                    binary_code_scheme=None, binary_coded_field=None, binary_analysis_file_key=None):
         self.raw_field = raw_field
         self.coded_field = coded_field
-        self.coda.coda_filename = coda_filename
+        self.coda_filename = coda_filename
         self.icr_filename = icr_filename
         self.cleaner = cleaner
         self.code_scheme = code_scheme
         self.time_field = time_field
-        self.run_id_field = time_field
+        self.run_id_field = run_id_field
         self.analysis_file_key = analysis_file_key
+        self.binary_code_scheme = binary_code_scheme
+        self.binary_code_field = binary_code_field
+        self.binary_analysis_file_key = binary_analysis_file_key
+
 
         if id_field is None:
             id_field = "{}_id".format(self.raw_field)
-        self.run_id_field = id_field
+        self.id_field = id_field
 
 class PipelineConfiguration(object):
    
@@ -25,24 +30,37 @@ class PipelineConfiguration(object):
 
     TEST_SHOWS_CODING_PLAN = [
         CodingPlan(raw_field="internet_working_raw",
-                coded_field="internet_working_coded",
                 time_field="sent_on",
                 coda_filename="internet_working.json"
                 icr_filename="internet_working.csv",
                 run_id_field="internet_working_id",
-                analysis_file_key="internet_working_",
                 cleaner=None,
-                code_scheme=CodeSchemes.INTERNET),
+                binary_code_scheme=CodeSchemes.INTERNET,
+                binary_coded_field="internet_working_coded",
+                binary_analysis_file_key="internet_working_yes_no"),
 
         CodingPlan(raw_field="water_filter_raw",
-                coded_field="water_filter_coded",
                 time_field="sent_on",
                 coda_filename="water_filter.json"
                 icr_filename="water_filter_icr.csv",
                 run_id_field="water_filter_id",
-                analysis_file_key="water_filter_",
                 cleaner=None,
-                code_scheme=CodeSchemes.WATER),
+                binary_coded_field="water_filter_coded",
+                binary_analysis_file_key="water_filter_yes_no"
+                binary_code_scheme=CodeSchemes.WATER),
+
+        CodingPlan(raw_field="waste_disposal_raw",
+                time_field="sent_on",
+                coda_filename="waste_disposal_improvement.json"
+                icr_filename="waste_disposal_icr.csv",
+                run_id_field="waste_disposal_improvement.json",
+                cleaner=None,
+                coded_field="waste_disposal_coded",
+                analysis_file_key="waste_disposal_",
+                code_scheme=CodeSchemes.WASTE,
+                binary_coded_field="waste_disposal_yes_no_coded",
+                binary_analysis_file_key="waste_disposal_yes_no"
+                binary_code_scheme=CodeSchemes.WASTE_YES_NO),
     ]
     
     @staticmethod
