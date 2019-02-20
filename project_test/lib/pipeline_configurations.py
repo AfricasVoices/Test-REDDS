@@ -16,7 +16,7 @@ class CodingPlan(object):
         self.run_id_field = run_id_field
         self.analysis_file_key = analysis_file_key
         self.binary_code_scheme = binary_code_scheme
-        self.binary_code_field = binary_code_field
+        self.binary_coded_field = binary_coded_field
         self.binary_analysis_file_key = binary_analysis_file_key
 
 
@@ -26,32 +26,38 @@ class CodingPlan(object):
 
 class PipelineConfiguration(object):
    
-    DEV_MODE = True #Set to True when testing the pipeline - False removes data for AVF test contacts.
+    DEV_MODE = True # Set to True when testing the pipeline - False removes data for AVF test contacts.
 
     TEST_SHOWS_CODING_PLAN = [
-        CodingPlan(raw_field="internet_working_raw",
+       CodingPlan(raw_field="internet_working_raw",
                 time_field="sent_on",
-                coda_filename="internet_working.json"
+                coded_field="internet_working_coded",
+                coda_filename="internet_working.json",
                 icr_filename="internet_working.csv",
                 run_id_field="internet_working_id",
                 cleaner=None,
-                binary_code_scheme=CodeSchemes.INTERNET,
+                analysis_file_key="internet_working_",
+                code_scheme=CodeSchemes.INTERNET,
+                binary_code_scheme=CodeSchemes.INTERNET_YES_NO,
                 binary_coded_field="internet_working_coded",
                 binary_analysis_file_key="internet_working_yes_no"),
 
         CodingPlan(raw_field="water_filter_raw",
                 time_field="sent_on",
-                coda_filename="water_filter.json"
+                coded_field="water_filter_coded",
+                coda_filename="water_filter.json",
                 icr_filename="water_filter_icr.csv",
                 run_id_field="water_filter_id",
                 cleaner=None,
+                analysis_file_key="water_filter_",
+                code_scheme=CodeSchemes.WATER,
+                binary_code_scheme=CodeSchemes.WATER_YES_NO,
                 binary_coded_field="water_filter_coded",
-                binary_analysis_file_key="water_filter_yes_no"
-                binary_code_scheme=CodeSchemes.WATER),
+                binary_analysis_file_key="water_filter_yes_no"),
 
         CodingPlan(raw_field="waste_disposal_raw",
                 time_field="sent_on",
-                coda_filename="waste_disposal_improvement.json"
+                coda_filename="waste_disposal_improvement.json",
                 icr_filename="waste_disposal_icr.csv",
                 run_id_field="waste_disposal_improvement.json",
                 cleaner=None,
@@ -59,7 +65,7 @@ class PipelineConfiguration(object):
                 analysis_file_key="waste_disposal_",
                 code_scheme=CodeSchemes.WASTE,
                 binary_coded_field="waste_disposal_yes_no_coded",
-                binary_analysis_file_key="waste_disposal_yes_no"
+                binary_analysis_file_key="waste_disposal_yes_no",
                 binary_code_scheme=CodeSchemes.WASTE_YES_NO),
     ]
     
@@ -78,12 +84,12 @@ class PipelineConfiguration(object):
                 coda_filename="age.json",
                 analysis_file_key="age",
                 cleaner=lambda text: PipelineConfiguration.test_clean_age(text),
-                code_scheme=CodeScheme.AGE),
+                code_scheme=CodeSchemes.AGE),
 
         CodingPlan(raw_field="gender_raw",
                 coded_field="gender_coded",
                 time_field="gender_time",
-                coda_filename="gender.json"
+                coda_filename="gender.json",
                 run_id_field="gender_id",
                 analysis_file_key="gender",
                 cleaner=swahili.DemographicCleaner.clean_gender,
@@ -92,7 +98,7 @@ class PipelineConfiguration(object):
         CodingPlan(raw_field="client_region_raw",
                 coded_field="client_region_coded",
                 time_field="client_region_time",
-                coda_filename="location.json"
+                coda_filename="location.json",
                 run_id_field="client_region_id",
                 analysis_file_key="client_region_",
                 cleaner=None,
