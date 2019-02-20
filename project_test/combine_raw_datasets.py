@@ -8,8 +8,7 @@ class CombineRawDatasets(object):
         for show_dataset in shows_datasets:
             data.extend(show_dataset)
 
-        for survey_dataset in survey_datasets:
-            TracedData.update_iterable(user, "avf_phone_id", data, survey_datasets, "survey_responses")
+        for survey in survey_datasets:
+            TracedData.update_iterable(user, "avf_phone_id", data, survey, "survey_responses")
         
         return data
-        
