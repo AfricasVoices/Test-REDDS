@@ -2,7 +2,7 @@ import time
 from os import path
 
 from core_data_modules.traced_data import Metadata
-from core_data_modules.traced_data.io import TracedDataCoda2IO
+from core_data_modules.traced_data.io import TracedDataCodaV2IO
 
 from dateutil.parser import isoparse
 
@@ -52,4 +52,3 @@ class TranslateRapidProKeys(object):
             td.append_data(mapped_dict,Metadata(user, Metadata.get_call_location(), time.time()))
         
         return data
-        

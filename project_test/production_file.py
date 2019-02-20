@@ -1,6 +1,6 @@
 from core_data_modules.traced_data.io import TracedDataCSVIO
 
-from project_test.lib import PipelineConfiguration, 
+from project_test.lib import PipelineConfiguration 
 
 class ProductionFile(object):
     @staticmethod
@@ -13,7 +13,7 @@ class ProductionFile(object):
             if plan.raw_field not in production_keys:
                 production_keys.append(plan.raw_field)
                 
-        #Not perfoming any message filtering on this test-pipeline
+        # Not perfoming message filtering at this stage for this test-pipeline.
         with open(production_csv_output_path, "w") as f:
             TracedDataCSVIO.export_traced_data_iterable_to_csv(data, f, headers=production_keys)
         

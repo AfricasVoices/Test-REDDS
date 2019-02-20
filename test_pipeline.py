@@ -10,11 +10,11 @@ from project_test.translate_rapid_pro_keys import TranslateRapidProKeys
 from project_test.production_file import ProductionFile
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description= "Runs the post-fetch phase of the Test pipeline", 
+    parser = argparse.ArgumentParser(description="Runs the post-fetch phase of the Test pipeline", 
                                     # Support \n and long lines
                                     formatter_class=argparse.RawTextHelpFormatter)
 
-    parser.add_argument(" --drive-upload", nargs=4,
+    parser.add_argument("--drive-upload", nargs=4,
                         metavar=("drive-credentials-path", "csv-by-message-drive-path",
                                  "csv-by-individual-drive-path", "production-csv-drive-path"),
                         help="Upload message csv, individual csv, and production csv to Drive. Parameters:\n"
@@ -100,20 +100,21 @@ if __name__ == "__main__":
     with open(phone_number_uuid_table_path, "r") as f:
         phone_number_uuid_table_path = PhoneNumberUuidTable.load(f)
 
-    #Load Messages
+    # Load Messages
     shows_datasets = []
     for i, path in enumerate(shows_paths):
         print("loading Show {}/{}...".format(i + 1, len(shows_paths)))
         with open(path, "r") as f:
             shows_datasets.append(TracedDataJsonIO.import_json_to_traced_data_iterable(f))
 
-    #Load surveys
+    # Load surveys
     print("Loading Demographics...")
     with open(demog_input_path, "r") as f:
         demographics = TracedDataJsonIO.import_json_to_traced_data_iterable(f)
 
-    print("Combining show-datasets & demogs...")
-    data = CombineRawDatasets.combine_raw_datasets(user, shows_datasets, demographics)
+    # Add survey data to the shows
+    print("Combining shows-datasets & demogs...")
+    data = CombineRawDatasets.combine_raw_datasets(user, shows_datasets, [demographics])
 
     print("Translating Rapid Pro Keys...")
     data = TranslateRapidProKeys.translate_rapid_pro_keys(user, data, prev_coded_dir_path)
@@ -121,14 +122,19 @@ if __name__ == "__main__":
     print("Exporting production CSV...")
     data = ProductionFile.generate(data, production_csv_output_path)
     
+    print("Writing TracedData to file....")
+    IOUtils.ensure_dirs_exist_for_file(json_output_path)
+    with open(json_output_path, "w") as f:
+        TracedDataJsonIO.export_traced_data_iterable_to_json(data, f, pretty_print=True)
+    
     if drive_upload:
         print("Uploading CSVs to Google Drive...")
         drive_client_wrapper.init_client(drive_credentials_path)
 
-        production_csv_drive_path = os.path.dirname(production_csv_drive_path)
-        production_csv_drive_file_name = os.path.basename(production_csv_drive_file_name)
-        drive_client_wrapper.update_or_create(production_csv_drive_path, production_csv_drive_dir,
-                                            target_file_name = production_csv_drive_file_name,
+        production_csv_drive_dir = os.path.dirname(production_csv_drive_path)
+        production_csv_drive_file_name = os.path.basename(production_csv_drive_path)
+        drive_client_wrapper.update_or_create(production_csv_output_path, production_csv_drive_dir,
+                                            target_file_name=production_csv_drive_file_name,
                                             target_folder_is_shared=True)
         print("Files successfully uploaded")
 
@@ -140,5 +146,4 @@ if __name__ == "__main__":
     with open(json_output_path, "w") as f:
         TracedDataJsonIO.export_traced_data_iterable_to_json(data, f, pretty_print=True)
 
-    print("Python script run complete")
-    
+    print("Python script complete")
