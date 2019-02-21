@@ -8,6 +8,7 @@ from storage.google_drive import drive_client_wrapper
 from project_test import CombineRawDatasets
 from project_test.translate_rapid_pro_keys import TranslateRapidProKeys
 from project_test.production_file import ProductionFile
+from project_test import AutoCodeMessages
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Runs the post-fetch phase of the Test pipeline", 
@@ -126,7 +127,7 @@ if __name__ == "__main__":
     IOUtils.ensure_dirs_exist_for_file(json_output_path)
     with open(json_output_path, "w") as f:
         TracedDataJsonIO.export_traced_data_iterable_to_json(data, f, pretty_print=True)
-    
+   
     if drive_upload:
         print("Uploading CSVs to Google Drive...")
         drive_client_wrapper.init_client(drive_credentials_path)
@@ -140,10 +141,5 @@ if __name__ == "__main__":
 
     else:
         print("Not uploading to Google Drive")
-    
-    print("Writing TracedData to file....")
-    IOUtils.ensure_dirs_exist_for_file(json_output_path)
-    with open(json_output_path, "w") as f:
-        TracedDataJsonIO.export_traced_data_iterable_to_json(data, f, pretty_print=True)
 
     print("Python script complete")
