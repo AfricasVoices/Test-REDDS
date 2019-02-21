@@ -28,7 +28,7 @@ class PipelineConfiguration(object):
    
     DEV_MODE = True # Set to True when testing the pipeline - False removes data for AVF test contacts.
 
-    TEST_SHOWS_CODING_PLAN = [
+    TEST_SHOWS_CODING_PLANS = [
        CodingPlan(raw_field="internet_working_raw",
                 time_field="sent_on",
                 coded_field="internet_working_coded",
