@@ -1,6 +1,6 @@
 {
     "Version": "0.0.0.1",
-    "Name": "Yes_No Internet Working?",
+    "Name": "Yes_No Internet Working",
     "SchemeID": "Scheme-04778c47cdcf",
     "Codes": [{
         "DisplayText": "Yes",
@@ -89,4 +89,3 @@
       }
     ]
   }
-  
