@@ -8,7 +8,7 @@
         "CodeID": "code-72db9807",
         "CodeType": "Normal",
         "StringValue": "increase_pickup_times",
-        "DisplayText": "Increase Pickup times"
+        "DisplayText": "Increase pickup times"
       },
       {
         "NumericValue": 1,
@@ -83,4 +83,3 @@
       }
     ]
   }
-  
