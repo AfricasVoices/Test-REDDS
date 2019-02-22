@@ -77,7 +77,7 @@ CMD="
     pipenv run $PROFILE_CPU_CMD python -u test_pipeline.py $DRIVE_UPLOAD_ARG \
     \"$USER\" /data/phone-number-uuid-table-input.json \
     /data/internet-working-input.json /data/water-filter-input.json /data/waste-disposal-input.json \
-    /data/demog-input.json /data/prev-coded /data/output.json /data/ouput-icr /data/coded \
+    /data/demog-input.json /data/prev-coded /data/output.json /data/output-icr /data/coded \
     /data/output-messages.csv /data/output-individuals.csv /data/output-production.csv \
 "
 
@@ -106,11 +106,11 @@ docker start -a -i "$container"
 mkdir -p "$(dirname "$OUTPUT_JSON")"
 docker cp "$container:/data/output.json" "$OUTPUT_JSON"
 
-# mkdir -p "$OUTPUT_ICR_DIR"
-# docker cp "$container:/data/output-icr/." "$OUTPUT_ICR_DIR"
+mkdir -p "$OUTPUT_ICR_DIR"
+docker cp "$container:/data/output-icr/." "$OUTPUT_ICR_DIR"
 
-# mkdir -p "$OUTPUT_CODED_DIR"
-# docker cp "$container:/data/output-messages-csv" "$OUTPUT_MESSAGES_CSV"
+mkdir -p "$OUTPUT_CODED_DIR"
+docker cp "$container:/data/coded/." "$OUTPUT_CODED_DIR"
 
 # mkdir -p "$(dirname "$OUTPUT_MESSAGES_CSV")"
 # docker cp "$container:/data/output-messages.csv" "$OUTPUT_MESSAGES_CSV"

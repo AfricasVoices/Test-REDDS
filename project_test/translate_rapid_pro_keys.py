@@ -13,9 +13,9 @@ class TranslateRapidProKeys(object):
         # List of (new_key, old_key)
         ("uid", "avf_phone_id"),
 
-        ("internet_working_raw", "Response_2 (Value) - internet_working_poll" ),
-        ("internet_working_run_id", "Response_2 (Run ID) - internet_working_poll"),
-        ("sent_on", "Response_2 (Time) - internet_working_poll"),
+        ("internet_working_raw", "Internet_Working (Value) - internet_working_poll" ),
+        ("internet_working_run_id", "Internet_Working (Run ID) - internet_working_poll"),
+        ("sent_on", "Internet_Working (Time) - internet_working_poll"),
 
         ("water_filter_raw", "Filter_Working (Value) - water_filter_poll"),
         ("water_filter_run_id", "Filter_Working (Run ID) - water_filter_poll"),

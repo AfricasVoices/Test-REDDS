@@ -8,7 +8,7 @@ from storage.google_drive import drive_client_wrapper
 from project_test import CombineRawDatasets
 from project_test.translate_rapid_pro_keys import TranslateRapidProKeys
 from project_test.production_file import ProductionFile
-from project_test import AutoCodeMessages
+from project_test import AutoCodeShowMessages
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Runs the post-fetch phase of the Test pipeline", 
@@ -120,6 +120,9 @@ if __name__ == "__main__":
     print("Translating Rapid Pro Keys...")
     data = TranslateRapidProKeys.translate_rapid_pro_keys(user, data, prev_coded_dir_path)
 
+    print("Auto coding Messages...")
+    data = AutoCodeShowMessages.auto_code_show_messages(user, data, icr_output_dir, coded_dir_path)
+
     print("Exporting production CSV...")
     data = ProductionFile.generate(data, production_csv_output_path)
     
@@ -138,7 +141,7 @@ if __name__ == "__main__":
                                             target_file_name=production_csv_drive_file_name,
                                             target_folder_is_shared=True)
         print("Files successfully uploaded")
-
+    
     else:
         print("Not uploading to Google Drive")
 
