@@ -1,27 +1,27 @@
 {
     "Version": "0.0.0.1",
-    "Name": "Yes_No Internet Working",
-    "SchemeID": "Scheme-04778c47cdcf",
+    "Name": "Water Filter Working Diagnosis",
+    "SchemeID": "Scheme-d1c4db9d0284",
     "Codes": [{
-        "DisplayText": "Yes",
+        "DisplayText": "Filter Blocked",
         "VisibleInCoda": true,
         "NumericValue": 0,
-        "CodeID": "code-edd2ad8de2cf",
+        "CodeID": "code-8133096a",
         "CodeType": "Normal",
         "MatchValues": [
-          "yes"
+          "filter blocked"
         ],
-        "StringValue": "yes"
+        "StringValue": "filter_blocked"
       },
       {
         "NumericValue": 1,
-        "CodeID": "code-41f5cd9f71ef",
+        "CodeID": "code-77aca9dd",
         "CodeType": "Normal",
         "MatchValues": [
-          "no"
+          "pipe leaking"
         ],
-        "StringValue": "no",
-        "DisplayText": "No",
+        "StringValue": "pipe_leaking",
+        "DisplayText": "Pipe Leaking",
         "VisibleInCoda": true
       },
       {

@@ -9,8 +9,10 @@ def _open_scheme(filename):
 
 class CodeSchemes(object):
 
-    INTERNET = _open_scheme("yes_no_internet.json")
-    WATER = _open_scheme("yes_no_water.json")
+    INTERNET = _open_scheme("internet_working.json")
+    INTERNET_YES_NO = _open_scheme("yes_no_internet.json")
+    WATER = _open_scheme("water_filter_working.json")
+    WATER_YES_NO = _open_scheme("yes_no_water.json")
     WASTE = _open_scheme("waste_disposal_improvement.json")
     WASTE_YES_NO = _open_scheme("yes_no_waste.json")
 

@@ -1,27 +1,27 @@
 {
     "Version": "0.0.0.1",
-    "Name": "Yes_No Internet Working",
-    "SchemeID": "Scheme-04778c47cdcf",
+    "Name": "Internet Working Diagnosis",
+    "SchemeID": "Scheme-679287576bf1",
     "Codes": [{
-        "DisplayText": "Yes",
+        "DisplayText": "Fiber Cut",
         "VisibleInCoda": true,
         "NumericValue": 0,
-        "CodeID": "code-edd2ad8de2cf",
+        "CodeID": "code-147b352b",
         "CodeType": "Normal",
         "MatchValues": [
-          "yes"
+          "fiber cut"
         ],
-        "StringValue": "yes"
+        "StringValue": "fiber_cut"
       },
       {
         "NumericValue": 1,
-        "CodeID": "code-41f5cd9f71ef",
+        "CodeID": "code-d7911b90",
         "CodeType": "Normal",
         "MatchValues": [
-          "no"
+          "slow connection"
         ],
-        "StringValue": "no",
-        "DisplayText": "No",
+        "StringValue": "slow_connection",
+        "DisplayText": "Slow Connection",
         "VisibleInCoda": true
       },
       {

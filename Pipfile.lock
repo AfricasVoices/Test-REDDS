@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f433b55238f8e1a536307cf8bec44a5bb8acb0cf961e21f6f8bc8483d9a000b0"
+            "sha256": "80369ad5153692120f34d44af211d6eab9f9a1d37a875d99df85b76cbd8d2928"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -46,7 +46,7 @@
         "coredatamodules": {
             "editable": true,
             "git": "https://www.github.com/AfricasVoices/CoreDataModules",
-            "ref": "36e011fea22431ec1222c7cf325f949b4b48acd7"
+            "ref": "4d3eb58635f3344b7d5a68dda79e9de70aac9ea3"
         },
         "deprecation": {
             "hashes": [
@@ -110,10 +110,11 @@
         },
         "google-cloud-storage": {
             "hashes": [
-                "sha256:0abd8ed57f041e4d85490054acd9af647eb7ffedece27433ba23a5c8391c00b3",
-                "sha256:f8884619fed4c77234c7293939be5a696869f61a5dc2ca47193cff630cee179f"
+                "sha256:a3115c22a71e2f172fade72c7b7b797a071f3ac9b66043191fc84c214ba0c671",
+                "sha256:aef243b533144c11c9ff750565c43dffe5445debb143697002edb6205f64a437"
             ],
-            "version": "==1.13.2"
+            "index": "pypi",
+            "version": "==1.14.0"
         },
         "google-resumable-media": {
             "hashes": [
@@ -124,9 +125,9 @@
         },
         "googleapis-common-protos": {
             "hashes": [
-                "sha256:6de6de98e895f4266caefa768778533bdea98abbead6972d35c8a0f57409eea2"
+                "sha256:d56ca712f67fff216d3be9eeeb8360ca59066d0365ba70b137b9e1801813747e"
             ],
-            "version": "==1.5.6"
+            "version": "==1.5.8"
         },
         "grpcio": {
             "hashes": [
@@ -163,9 +164,9 @@
         },
         "httplib2": {
             "hashes": [
-                "sha256:f61fb838a94ce3b349aa32c92fd8430f7e3511afdb18bf9640d647e30c90a6d6"
+                "sha256:4ba6b8fd77d0038769bf3c33c9a96a6f752bc4cdf739701fdcaf210121f399d4"
             ],
-            "version": "==0.12.0"
+            "version": "==0.12.1"
         },
         "idna": {
             "hashes": [
@@ -266,11 +267,11 @@
         },
         "python-dateutil": {
             "hashes": [
-                "sha256:063df5763652e21de43de7d9e00ccf239f953a832941e37be541614732cdfc93",
-                "sha256:88f9287c0174266bb0d8cedd395cfba9c58e87e5ad86b2ce58859bc11be3cf02"
+                "sha256:7e6584c74aeed623791615e26efd690f29817a27c73085b78e4bad02493df2fb",
+                "sha256:c89805f6f4d64db21ed966fda138f8a5ed7a4fdbc1a8ee329ce1b74e3c74da9e"
             ],
             "index": "pypi",
-            "version": "==2.7.5"
+            "version": "==2.8.0"
         },
         "pytz": {
             "hashes": [
