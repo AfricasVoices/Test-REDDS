@@ -19,7 +19,6 @@ class CodingPlan(object):
         self.binary_coded_field = binary_coded_field
         self.binary_analysis_file_key = binary_analysis_file_key
 
-
         if id_field is None:
             id_field = "{}_id".format(self.raw_field)
         self.id_field = id_field
@@ -34,12 +33,12 @@ class PipelineConfiguration(object):
                 coded_field="internet_working_coded",
                 coda_filename="internet_working.json",
                 icr_filename="internet_working.csv",
-                run_id_field="internet_working_id",
+                run_id_field="internet_working_run_id",
                 cleaner=None,
                 analysis_file_key="internet_working_",
                 code_scheme=CodeSchemes.INTERNET,
                 binary_code_scheme=CodeSchemes.INTERNET_YES_NO,
-                binary_coded_field="internet_working_coded",
+                binary_coded_field="internet_working_yes_no_coded",
                 binary_analysis_file_key="internet_working_yes_no"),
 
         CodingPlan(raw_field="water_filter_raw",
@@ -47,19 +46,19 @@ class PipelineConfiguration(object):
                 coded_field="water_filter_coded",
                 coda_filename="water_filter.json",
                 icr_filename="water_filter_icr.csv",
-                run_id_field="water_filter_id",
+                run_id_field="water_filter_run_id",
                 cleaner=None,
                 analysis_file_key="water_filter_",
                 code_scheme=CodeSchemes.WATER,
                 binary_code_scheme=CodeSchemes.WATER_YES_NO,
-                binary_coded_field="water_filter_coded",
+                binary_coded_field="water_filter_coded_yes_no_coded",
                 binary_analysis_file_key="water_filter_yes_no"),
 
         CodingPlan(raw_field="waste_disposal_raw",
                 time_field="sent_on",
                 coda_filename="waste_disposal_improvement.json",
                 icr_filename="waste_disposal_icr.csv",
-                run_id_field="waste_disposal_improvement.json",
+                run_id_field="waste_disposal_run_id",
                 cleaner=None,
                 coded_field="waste_disposal_coded",
                 analysis_file_key="waste_disposal_",
