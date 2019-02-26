@@ -47,7 +47,7 @@ INPUT_DEMOG=$6
 PREV_CODED_DIR=$7
 OUTPUT_JSON=${8}
 OUTPUT_ICR_DIR=${9}
-OUTPUT_CODED_DIR=${10}
+OUTPUT_AUTO_CODED_CODA_DATASETS=${10}
 OUTPUT_MESSAGES_CSV=${11}
 OUTPUT_INDIVIDUALS_CSV=${12}
 OUTPUT_PRODUCTION_CSV=${13}
@@ -109,8 +109,8 @@ docker cp "$container:/data/output.json" "$OUTPUT_JSON"
 mkdir -p "$OUTPUT_ICR_DIR"
 docker cp "$container:/data/output-icr/." "$OUTPUT_ICR_DIR"
 
-mkdir -p "$OUTPUT_CODED_DIR"
-docker cp "$container:/data/coded/." "$OUTPUT_CODED_DIR"
+mkdir -p "$OUTPUT_AUTO_CODED_CODA_DATASETS"
+docker cp "$container:/data/coded/." "$OUTPUT_AUTO_CODED_CODA_DATASETS"
 
 # mkdir -p "$(dirname "$OUTPUT_MESSAGES_CSV")"
 # docker cp "$container:/data/output-messages.csv" "$OUTPUT_MESSAGES_CSV"

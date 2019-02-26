@@ -10,7 +10,9 @@ class Channels(object):
     INTERNET_KEY = "internet_working"
     WATER_KEY =  "water_filter"
     WASTE_KEY = "waste_disposal"
-
+    
+    # Time ranges set to the same period since the test flows were activated within the same time,however in a real scenario 
+    # the radio shows have different time range. The range is used to distinguish radio show msgs.
     # Time ranges expressed in format (start_of_range_inclusive, end_of_range_exclusive)
     INTERNET_RANGES = [("2019-01-01T00:00:00+03:00","2019-04-01T00:00:00+03:00")]
     WATER_RANGES = [("2019-01-01T00:00:00+03:00","2019-04-01T00:00:00+03:00")]
@@ -36,7 +38,7 @@ class Channels(object):
 
             channel_dict = dict()
             
-            # Set time as NON_LOGICAL if it doesn't fall in range of ** radio_show**
+            # Set time as NON_LOGICAL if it doesn't fall in range of ** radio_shows**
             time_range_matches = 0
             if time_range_matches == 0:
                 # Assert in range of project
