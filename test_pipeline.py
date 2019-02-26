@@ -10,6 +10,7 @@ from project_test.translate_rapid_pro_keys import TranslateRapidProKeys
 from project_test.production_file import ProductionFile
 from project_test import AutoCodeShowMessages
 from project_test import AutoCodeSurveys
+from project_test import ApplyManualCodes
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Runs the post-fetch phase of the Test pipeline", 
