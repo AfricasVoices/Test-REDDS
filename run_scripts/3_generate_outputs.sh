@@ -35,13 +35,12 @@ DATA_ROOT=$2
 
 mkdir -p "$DATA_ROOT/Coded Coda Files"
 mkdir -p "$DATA_ROOT/Pipeline Outputs"
-mkdir -p "$DATA_ROOT/Pipeline Outputs/ICR"
 
 ./docker-run.sh ${CPU_PROFILE_ARG} ${DRIVE_UPLOAD_ARG} \
     "$USER" "$DATA_ROOT/UUIDs/phone_uuids.json" \
     "$DATA_ROOT/Raw Data/water_filter_poll.json" "$DATA_ROOT/Raw Data/internet_working_poll.json" \
     "$DATA_ROOT/Raw Data/waste_disposal_satisfaction.json" "$DATA_ROOT/Raw Data/demogs.json" \
     "$DATA_ROOT/Coded Coda Files" "$DATA_ROOT/Pipeline Outputs/traced_data.JSON" \
-    "$DATA_ROOT/Pipeline Outputs/ICR" "$DATA_ROOT/Coded Coda Files/" \
+    "$DATA_ROOT/Pipeline Outputs/ICR" "$DATA_ROOT/Coda Files/" \
     "$DATA_ROOT/Pipeline Outputs/test_pipeline_mes.csv" "$DATA_ROOT/Pipeline Outputs/test_pipeline_ind.csv" \
     "$DATA_ROOT/Pipeline Outputs/test_pipeline_production.csv"
