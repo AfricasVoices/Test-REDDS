@@ -32,7 +32,6 @@ class ApplyManualCodes(object):
                         f.seek(0)
                     TracedDataCodaV2IO.import_coda_2_to_traced_data_iterable(
                         user, test_pipeline_messages, plan.id_field, {plan.binary_coded_field:plan.binary_code_scheme}, f)
-
             finally:
                 if f is not None:
                     f.close()

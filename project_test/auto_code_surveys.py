@@ -19,7 +19,7 @@ class AutoCodeSurveys(object):
         for td in data:
             missing_dict = dict()
             for plan in PipelineConfiguration.SURVEY_CODING_PLANS:
-                if td.get(plan.raw_field, "") =="":
+                if td.get(plan.raw_field, "") == "":
                     na_label = CleaningUtils.make_label_from_cleaner_code(
                         plan.code_scheme, plan.code_scheme.get_code_with_control_code(Codes.TRUE_MISSING),
                         Metadata.get_call_location()
@@ -35,10 +35,8 @@ class AutoCodeSurveys(object):
                                                                     
         # Output survey answers to coda for manual verification + coding
         IOUtils.ensure_dirs_exist(coda_output_dir)
-        for plan in PipelineConfiguration.SURVEY_CODING_PLANS:
-            
+        for plan in PipelineConfiguration.SURVEY_CODING_PLANS:      
             TracedDataCodaV2IO.compute_message_ids(user, data, plan.raw_field, plan.id_field)
-
             coda_output_path = path.join(coda_output_dir, plan.coda_filename)
             with open(coda_output_path, 'w') as f:
                 TracedDataCodaV2IO.export_traced_data_iterable_to_coda_2(
