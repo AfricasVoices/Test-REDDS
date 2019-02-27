@@ -74,7 +74,7 @@ class PipelineConfiguration(object):
         if type(age) == int and 10 <= age < 100:
             return str(age)
         else:
-            return Codes.Not_Coded
+            return Codes.NOT_CODED
 
     SURVEY_CODING_PLANS = [
         CodingPlan(raw_field="age_raw",
@@ -82,7 +82,7 @@ class PipelineConfiguration(object):
                 time_field="age_time",
                 coda_filename="age.json",
                 analysis_file_key="age",
-                cleaner=lambda text: PipelineConfiguration.test_clean_age(text),
+                cleaner=lambda text: PipelineConfiguration.clean_age_within_range(text),
                 code_scheme=CodeSchemes.AGE),
 
         CodingPlan(raw_field="gender_raw",

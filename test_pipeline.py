@@ -9,6 +9,7 @@ from project_test import CombineRawDatasets
 from project_test.translate_rapid_pro_keys import TranslateRapidProKeys
 from project_test.production_file import ProductionFile
 from project_test import AutoCodeShowMessages
+from project_test import AutoCodeSurveys
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Runs the post-fetch phase of the Test pipeline", 
@@ -122,6 +123,9 @@ if __name__ == "__main__":
 
     print("Auto coding Messages...")
     data = AutoCodeShowMessages.auto_code_show_messages(user, data, icr_output_dir, coded_dir_path)
+    
+    print("Auto coding surveys...")
+    data = AutoCodeSurveys.auto_code_surveys(user, data, phone_number_uuid_table_path, coded_dir_path)
 
     print("Exporting production CSV...")
     data = ProductionFile.generate(data, production_csv_output_path)
