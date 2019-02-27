@@ -3,7 +3,7 @@ from core_data_modules.cleaners import swahili, Codes
 from project_test.lib.test_schemes import CodeSchemes
 
 class CodingPlan(object):
-    def __init__ (self, raw_field, coded_field, coda_filename, cleaner=None, code_scheme=None, time_field=None,
+    def __init__(self, raw_field, coded_field, coda_filename, cleaner=None, code_scheme=None, time_field=None,
                     run_id_field=None, icr_filename=None, analysis_file_key=None, id_field=None,
                     binary_code_scheme=None, binary_coded_field=None, binary_analysis_file_key=None):
         self.raw_field = raw_field
@@ -51,7 +51,7 @@ class PipelineConfiguration(object):
                 analysis_file_key="water_filter_",
                 code_scheme=CodeSchemes.WATER,
                 binary_code_scheme=CodeSchemes.WATER_YES_NO,
-                binary_coded_field="water_filter_coded_yes_no_coded",
+                binary_coded_field="water_filter_yes_no_coded",
                 binary_analysis_file_key="water_filter_yes_no"),
 
         CodingPlan(raw_field="waste_disposal_raw",
