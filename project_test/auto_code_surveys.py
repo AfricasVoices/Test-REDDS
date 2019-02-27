@@ -37,7 +37,6 @@ class AutoCodeSurveys(object):
         IOUtils.ensure_dirs_exist(coda_output_dir)
         for plan in PipelineConfiguration.SURVEY_CODING_PLANS:      
             TracedDataCodaV2IO.compute_message_ids(user, data, plan.raw_field, plan.id_field)
-
             coda_output_path = path.join(coda_output_dir, plan.coda_filename)
             with open(coda_output_path, 'w') as f:
                 TracedDataCodaV2IO.export_traced_data_iterable_to_coda_2(
