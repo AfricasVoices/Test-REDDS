@@ -11,6 +11,7 @@ from project_test.production_file import ProductionFile
 from project_test import AutoCodeShowMessages
 from project_test import AutoCodeSurveys
 from project_test import ApplyManualCodes
+from project_test import AnalysisFile
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Runs the post-fetch phase of the Test pipeline", 
@@ -125,15 +126,18 @@ if __name__ == "__main__":
     print("Auto coding Messages...")
     data = AutoCodeShowMessages.auto_code_show_messages(user, data, icr_output_dir, coded_dir_path)
 
-    print("Exporting production CSV...")
-    data = ProductionFile.generate(data, production_csv_output_path)
-    
     print("Auto coding surveys...")
     data =AutoCodeSurveys.auto_code_surveys(user, data, phone_number_uuid_table_path, coded_dir_path)
 
+    print("Exporting production CSV...")
+    data = ProductionFile.generate(data, production_csv_output_path)
+    
     print("Appling Manual Codes from Coda....")
     data = ApplyManualCodes.apply_manual_codes(user, data, prev_coded_dir_path)
 
+    print("Generating Analysis CSVs...")
+    data = AnalysisFile.generate(user, data, csv_by_message_output_path, csv_by_individual_output_path)
+    
     print("Writing TracedData to file....")
     IOUtils.ensure_dirs_exist_for_file(json_output_path)
     with open(json_output_path, "w") as f:
