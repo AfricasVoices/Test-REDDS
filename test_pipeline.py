@@ -126,12 +126,12 @@ if __name__ == "__main__":
     print("Auto coding Messages...")
     data = AutoCodeShowMessages.auto_code_show_messages(user, data, icr_output_dir, coded_dir_path)
 
+    print("Exporting production CSV...")
+    data = ProductionFile.generate(data, production_csv_output_path)
+
     print("Auto coding surveys...")
     data =AutoCodeSurveys.auto_code_surveys(user, data, phone_number_uuid_table_path, coded_dir_path)
 
-    print("Exporting production CSV...")
-    data = ProductionFile.generate(data, production_csv_output_path)
-    
     print("Appling Manual Codes from Coda....")
     data = ApplyManualCodes.apply_manual_codes(user, data, prev_coded_dir_path)
 
