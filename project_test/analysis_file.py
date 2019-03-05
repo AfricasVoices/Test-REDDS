@@ -72,11 +72,12 @@ class ConsentUtils(object):
             if td.get(withdrawn_key) == Codes.TRUE:
                 stop_dict = {key: Codes.STOP for key in td.keys() if key != withdrawn_key}
                 td.append_data(stop_dict, Metadata(user, Metadata.get_call_location(), time.time()))       
+                
 class AnalysisFile(object):
     @staticmethod
     def generate(user, data, csv_by_message_output_path, csv_by_individual_output_path):
         # Serializer is currently overflowing
-        # TODO: Investigate/addres the cause of this.
+        # TODO: Investigate/address the cause of this.
         sys.setrecursionlimit(10000)
 
         consent_withdrawn_key = "consent_withdrawn"
@@ -99,8 +100,7 @@ class AnalysisFile(object):
                 for plan in PipelineConfiguration.SURVEY_CODING_PLANS},
                 Metadata(user, Metadata.get_call_location(), time.time())
             )
-
-        
+  
         # Convert Test Radio Questions binary codes to their string values
         for td in data:
             td.append_data(
@@ -114,18 +114,15 @@ class AnalysisFile(object):
         matrix_keys = []
 
         for plan in PipelineConfiguration.TEST_SHOWS_CODING_PLANS:
-            show_matrix_keys = set()
+            show_matrix_keys = list()
             for code in plan.code_scheme.codes:
-                show_matrix_keys.add(f"{plan.analysis_file_key}{code.string_value}")
+                show_matrix_keys.append(f"{plan.analysis_file_key}{code.string_value}")
 
             AnalysisKeys.set_matrix_keys(
                 user, data, show_matrix_keys, plan.code_scheme, plan.coded_field, plan.analysis_file_key)
 
             matrix_keys.extend(show_matrix_keys)
-        
-        matrix_keys.sort()
-            
-
+                    
         binary_keys = [plan.binary_analysis_file_key
                         for plan in PipelineConfiguration.TEST_SHOWS_CODING_PLANS
                         if plan.binary_analysis_file_key is not None]
@@ -135,7 +132,6 @@ class AnalysisFile(object):
         concat_keys = [plan.raw_field for plan in PipelineConfiguration.TEST_SHOWS_CODING_PLANS]
         bool_keys = [
             consent_withdrawn_key,
-
         ]
 
         # Export to CSV
@@ -192,16 +188,16 @@ class AnalysisFile(object):
                                     Metadata(user, Metadata.get_call_location(), TimeUtils.utc_now_as_iso_string()))
 
             
-            # Process consent
-            ConsentUtils.set_stopped(user, data, consent_withdrawn_key)
-            ConsentUtils.set_stopped(user, folded_data, consent_withdrawn_key)
+        # Process consent
+        ConsentUtils.set_stopped(user, data, consent_withdrawn_key)
+        ConsentUtils.set_stopped(user, folded_data, consent_withdrawn_key)
 
-            # Output to CSV with one message per row
-            with open(csv_by_message_output_path, "w") as f:
-                TracedDataCSVIO.export_traced_data_iterable_to_csv(data, f, headers=export_keys)
-            
-            # Output to CSV with one individual per row
-            with open(csv_by_individual_output_path, "w") as f:
-                TracedDataCSVIO.export_traced_data_iterable_to_csv(folded_data, f, headers=export_keys)
-            
-            return data
+        # Output to CSV with one message per row
+        with open(csv_by_message_output_path, "w") as f:
+            TracedDataCSVIO.export_traced_data_iterable_to_csv(data, f, headers=export_keys)
+        
+        # Output to CSV with one individual per row
+        with open(csv_by_individual_output_path, "w") as f:
+            TracedDataCSVIO.export_traced_data_iterable_to_csv(folded_data, f, headers=export_keys)
+        
+        return data
