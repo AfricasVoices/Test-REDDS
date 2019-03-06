@@ -35,7 +35,6 @@ DATA_ROOT=$2
 
 mkdir -p "$DATA_ROOT/Coded Coda Files"
 mkdir -p "$DATA_ROOT/Pipeline Outputs"
-mkdir -p "$DATA_ROOT/Pipeline Outputs/ICR"
 
 ./docker-run.sh ${CPU_PROFILE_ARG} ${DRIVE_UPLOAD_ARG} \
     "$USER" "$DATA_ROOT/UUIDs/phone_uuids.json" \
