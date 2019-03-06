@@ -13,15 +13,15 @@ from project_test.lib.test_schemes import CodeSchemes
 class ConsentUtils(object):
     @staticmethod
     def td_has_stop_code(td, coding_plans):
-        """
+         """
         Returns whether any of the values for the given keys are Codes.STOP in the given TracedData object.
-        
-        Arguments:
-            td {TracedData} -- TracedData object to search for stop codes.
-            coding_plans {iterable of CodingPlan} -- iterable of CodingPlan
-        
-        Returns:
-            [bool] -- Whether td contains Codes.STOP in any of the keys in 'keys'
+
+        :param td: TracedData object to search for stop codes.
+        :type td: TracedData
+        :param coding_plans:
+        :type coding_plans: iterable of CodingPlan
+        :return: Whether td contains Codes.STOP in any of the keys in 'keys'.
+        :rtype: bool
         """
 
         for plan in coding_plans:
@@ -31,21 +31,22 @@ class ConsentUtils(object):
 
     @classmethod
     def determine_consent_withdrawn(cls, user, data, coding_plans, withdrawn_key="consent_withdrawn"):
-        """
+       """
         Determines whether consent has been withdrawn, by searching for Codes.STOP in the given list of keys.
 
         TracedData objects where a stop code is found will have the key-value pair <withdrawn_key>: Codes.TRUE
         appended. Objects where a stop code is not found are not modified.
 
         Note that this does not actually set any other keys to Codes.STOP. Use Consent.set_stopped for this purpose.
-        
-        Arguments:
-            user {str} -- Identifier of the user running this program, for TracedData Metadata.
-            data {iterable of TracedData} -- TracedData objects to determine consent for.
-            coding_plans {iterable of CodingPlan} -- pipeline labelling plans derived from pipeline configurations 
-        
-        Keyword Arguments:
-            withdrawn_key {str} -- Name of key to use for the consent withdrawn field. (default: {"consent_withdrawn"})
+
+        :param user: Identifier of the user running this program, for TracedData Metadata.
+        :type user: str
+        :param data: TracedData objects to determine consent for.
+        :type data: iterable of TracedData
+        :param coding_plans:
+        :type coding_plans: iterable of CodingPlan
+        :param withdrawn_key: Name of key to use for the consent withdrawn field.
+        :type withdrawn_key: str
         """
         for td in data:
             if cls.td_has_stop_code(td, coding_plans):
@@ -56,16 +57,16 @@ class ConsentUtils(object):
     
     @staticmethod
     def set_stopped(user, data, withdrawn_key="consent_withdrawn"):
-        """
+       """
         For each TracedData object in an iterable whose 'withdrawn_key' is Codes.True, sets every other key to
         Codes.STOP. If there is no withdrawn_key or the value is not Codes.True, that TracedData object is not modified.
-        
-        Arguments:
-            user {str} -- Identifier of the user running this program, for TracedData Metadata.
-            data {iterable of TracedData} -- TracedData objects to set to stopped if consent has been withdrawn.
-        
-        Keyword Arguments:
-            withdrawn_key {str} -- Key in each TracedData object which indicates whether consent has been withdrawn. (default: {"consent_withdrawn"})
+
+        :param user: Identifier of the user running this program, for TracedData Metadata.
+        :type user: str
+        :param data: TracedData objects to set to stopped if consent has been withdrawn.
+        :type data: iterable of TracedData
+        :param withdrawn_key: Key in each TracedData object which indicates whether consent has been withdrawn.
+        :type withdrawn_key: str
         """
 
         for td in data:
